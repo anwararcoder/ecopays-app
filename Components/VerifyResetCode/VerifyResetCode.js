@@ -6,7 +6,7 @@ import { ContextAuth } from "@/Context/contextAuth";
 import { verifyResetCode } from "@/ReactQuery/FunctionsReactQuery";
 import toast from "react-hot-toast";
 import logInBackground from "@/public/images/login/login-bg.jpg";
-import VerificationCodeInput from 'react-verification-code-input';
+// import VerificationCodeInput from 'react-verification-code-input';
 
 
 const VerifyResetCode = () => {
@@ -66,10 +66,10 @@ const VerifyResetCode = () => {
                             <p className="text-gray-500 text-base font-normal leading-[27px] mt-[18px]">
                                 We emailed you a six-digit code. Enter the code below to confirm your email address.                            </p>
                         </div>
-                        <VerificationCodeInput
+                        {/* <VerificationCodeInput
                             onComplete={handleComplete}
                             length={6} // Adjust the length of the code as needed
-                        />
+                        /> */}
                         <div className="mt-[30px] text-center bg-[#f9fafb] text-[#777] p-[15px] block text-[14px] font-[500]">
                             Make sure to keep this window open while check your inbox.
                         </div>

@@ -3,7 +3,7 @@ import { getOrderById } from "@/ReactQuery/FunctionsReactQuery";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import React, { useRef } from "react";
-import logoImage from "../../public/images/logo/2logo.png";
+import logoImage from "@/public/images/logo/2logo.png";
 import Image from "next/image";
 import formatDateTime from "@/Components/Utilities/formatDateTime";
 import ReactToPrint from "react-to-print";
