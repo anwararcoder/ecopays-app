@@ -41,10 +41,12 @@ const ProductDetails = () => {
     const { data: wishlist, refetch: refetchWishlist } = useQuery({
         queryKey: ["Wishlist"],
         queryFn: getWishlist,
+        enabled: isLogged, 
     });
     const { data: cart, refetch: refetchCart } = useQuery({
         queryKey: ["Cart"],
         queryFn: getCart,
+        enabled: isLogged,
     });
 
     const isInWishlist = wishlist?.data.some((item) => item._id === product?.data._id);

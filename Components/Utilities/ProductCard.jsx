@@ -26,10 +26,12 @@ const ProductCard = ({ product }) => {
   const { data: wishlist, refetch } = useQuery({
     queryKey: ["Wishlist"],
     queryFn: getWishlist,
+    enabled: isLogged, 
   });
   const { data: cart, refetch: refetchCart } = useQuery({
     queryKey: ["Cart"],
     queryFn: getCart,
+    enabled: isLogged,
   });
   const isInWishlist = wishlist?.data.some((item) => item._id === product._id);
   const addToWishlistMutation = useAddToWishlistMutation(refetch);

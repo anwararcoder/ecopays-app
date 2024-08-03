@@ -18,11 +18,13 @@ const NavbarTop = () => {
     const { data: cart, refetch: refetchCart } = useQuery({
         queryKey: ["Cart"],
         queryFn: getCart,
+        enabled: isLogged, 
     });
 
     const { data: wishlist, refetch: refetchWishlist } = useQuery({
         queryKey: ["Wishlist"],
         queryFn: getWishlist,
+        enabled: isLogged, 
     });
 
     const optionsUser = [

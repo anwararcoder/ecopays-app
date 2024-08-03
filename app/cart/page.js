@@ -15,6 +15,7 @@ const CartPage = () => {
   } = useQuery({
     queryKey: ["Cart"],
     queryFn: getCart,
+    enabled: isLogged,
   });
 
   if (isLoadingCart) {

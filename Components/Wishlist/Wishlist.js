@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Breadcrumb from '../Utilities/Breadcrumb'
 import { getCart, getWishlist } from '@/ReactQuery/FunctionsReactQuery';
 import { QueryClient, useQuery } from '@tanstack/react-query';
@@ -9,12 +9,15 @@ import toast from 'react-hot-toast';
 import useAddToCartMutation from '@/Hooks/useAddToCartMutation';
 import Skeleton from 'react-loading-skeleton';
 import Image from 'next/image';
+import { ContextAuth } from '@/Context/contextAuth';
 
 const Wishlist = () => {
     const [queryClient] = useState(() => new QueryClient());
+    const { isLogged } = useContext(ContextAuth);
     const { data: wishlist, isLoading: isLoadingWishlist, refetch: refetchWishlist } = useQuery({
         queryKey: ["Wishlist"],
         queryFn: getWishlist,
+        enabled: isLogged,
     });
     const removeFromWishlistMutation = useRemoveFromWishlistMutation(refetchWishlist);
     const wishlistHandelClick = async (productId) => {
@@ -24,6 +27,7 @@ const Wishlist = () => {
     const { data: cart, refetch: refetchCart } = useQuery({
         queryKey: ["Cart"],
         queryFn: getCart,
+        enabled: isLogged,
     });
     const addToCartMutation = useAddToCartMutation(false, refetchCart);
     const cartHandelClick = async (productId) => {
