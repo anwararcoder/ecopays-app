@@ -23,8 +23,7 @@ This repo contains a work in progress Ecommerce responsive made with Next.js, Re
 
 ## Screenshots
 
-1111
-
+![ecopays (1)](https://github.com/user-attachments/assets/02c99f8a-f108-4efc-a4a1-138eb9cfde84)
 
 
 ## How To Run Ecopays-App Project
