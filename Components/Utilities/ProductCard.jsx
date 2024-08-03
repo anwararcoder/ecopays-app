@@ -68,7 +68,7 @@ const ProductCard = ({ product }) => {
       <div className="relative flex-shrink-0 bg-white rounded-3xl overflow-hidden z-1 group">
         <Link className="block" href={`/products/${product._id}`}>
           <div className="flex aspect-w-11 aspect-h-12 w-full">
-            <Image
+            <Image loading='lazy'
             width={500}
             height={500}
               className="w-full object-cover"

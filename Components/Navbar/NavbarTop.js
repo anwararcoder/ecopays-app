@@ -47,7 +47,7 @@ const NavbarTop = () => {
             <div className='container px-[15px] mx-auto '>
                 <div className='flex items-center justify-center xl:justify-between flex-wrap gap-[30px]'>
                     <Link href='/' className='block'>
-                        <Image className='w-[180px]' src={LogoImage} alt='Logo' />
+                        <Image loading='lazy' className='w-[180px]' src={LogoImage} alt='Logo' />
                     </Link>
                     <SearchBox />
                     <div>

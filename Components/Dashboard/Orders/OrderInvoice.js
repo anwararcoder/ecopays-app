@@ -29,7 +29,7 @@ const OrderInvoice = () => {
       <div className="overflow-x-auto" ref={componentRef}>
         <div className="min-w-[800px]">
           <div class="flex flex-wrap items-center rounded-t-3xl justify-between gap-6 bg-[#EE6C4D] p-8 relative after:rotate-[133deg] after:rounded-ss-none after:-bottom-3 after:start-[50%] after:absolute after:border-[25px] after:border-t-[#EE6C4D] after:border-e-[#EE6C4D] after:border-transparent">
-            <Image className="max-w-[150px]" src={logoImage} alt="Ecopays" />
+            <Image loading='lazy' className="max-w-[150px]" src={logoImage} alt="Ecopays" />
             <h4 class="text-5xl font-semibold uppercase tracking-widest text-white float-right">
               Invoice
             </h4>

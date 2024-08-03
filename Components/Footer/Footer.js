@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container px-[15px] mx-auto relative z-10">
                 <div className="gap-[50px] mb-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <div>
-                        <Image loading="lazy" className="mb-[30px] w-[125px]" src={LogoImage} alt="01 Logo" />
+                        <Image loading='lazy' loading="lazy" className="mb-[30px] w-[125px]" src={LogoImage} alt="01 Logo" />
                         <p className="leading-[19px] text-white">SIn This Season, Find The Best 🔥 Exclusive collection for everyone</p>
                     </div>
                     <div>

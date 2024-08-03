@@ -19,7 +19,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center'>
                         <div className='w-full'>
-                            <Image src={HeaderImage} alt="header" />
+                            <Image loading='lazy' src={HeaderImage} alt="header" />
                         </div>
                     </div>
                 </div>

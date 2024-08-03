@@ -89,7 +89,7 @@ const CartItem = ({ products, setProducts, item, refetchCart }) => {
           src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png"
           alt={item.product.title}
         /> */}
-        <Image
+        <Image loading='lazy'
           src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png"
           alt={item.product.title}
           width={100}

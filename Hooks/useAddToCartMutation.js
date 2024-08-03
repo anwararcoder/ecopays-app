@@ -3,6 +3,7 @@ import { QueryClient, useMutation, useQuery } from "@tanstack/react-query";
 import toast from 'react-hot-toast';
 import { addToCart } from '@/ReactQuery/FunctionsReactQuery';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const useAddToCartMutation = (product, refetchCart) => {
   const [queryClient] = useState(() => new QueryClient());
@@ -33,7 +34,7 @@ const useAddToCartMutation = (product, refetchCart) => {
                 <div className="border-t border-slate-200 dark:border-slate-700 my-4"></div>
                 <div className="flex ">
                   <div className="h-24 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
-                    <img src={product?.imageCover} alt={product?.title} />
+                    <Image loading='lazy' src={product?.imageCover} alt={product?.title} />
                   </div>
                   <div className="ms-4 flex flex-1 flex-col">
                     <div>

@@ -56,7 +56,7 @@ const ArDropdownList = ({
         onClick={toggleDropdown}
       >
         {userImageLink ? (
-          <Image
+          <Image loading='lazy'
             src={userImageLink}
             alt="User"
             className="w-[40px] h-[40px] object-cover rounded-full"

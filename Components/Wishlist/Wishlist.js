@@ -43,7 +43,7 @@ const Wishlist = () => {
                     <div className='flex flex-col gap-[30px]'>
                         <div className='flex flex-wrap items-center justify-between gap-[20px] border-[#DDD] border-[1px] rounded-[8px] p-[25px]'>
                             <div className='block'>
-                                <Image height={100} width={100} className='w-[100px] h-[100px] object-cover rounded-[8px]' src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png" alt="product" />
+                                <Image loading='lazy' height={100} width={100} className='w-[100px] h-[100px] object-cover rounded-[8px]' src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png" alt="product" />
                             </div>
                             <div className='min-w-[350px] text-center'>
                                 <Skeleton height={28} width={300} />
@@ -76,7 +76,7 @@ const Wishlist = () => {
                             {wishlist?.data.map(item => {
                             return <div key={item._id} className='flex flex-wrap items-center justify-between gap-[20px] border-[#DDD] border-[1px] rounded-[8px] p-[25px]'>
                                 <Link href={`/products/${item._id}`} className='block'>
-                                    <Image height={100} width={100} className='w-[100px] h-[100px] object-cover rounded-[8px]' src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png" alt={item.title} />
+                                    <Image loading='lazy' height={100} width={100} className='w-[100px] h-[100px] object-cover rounded-[8px]' src="https://cdn-icons-png.flaticon.com/512/10446/10446694.png" alt={item.title} />
                                 </Link>
                                 <div className='min-w-[350px] text-center'>
                                     <Link href={`/products/${item._id}`} className='block'>

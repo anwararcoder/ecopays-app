@@ -18,7 +18,7 @@ const ProductDetailsImages = ({ productTitle, imageCover, images }) => {
             const imageUrl = allImages[index];
             return `
                 <div class='${className}'>
-                    <img src="${imageUrl}" alt="${productTitle}" />
+                    <img loading='lazy' src="${imageUrl}" alt="${productTitle}" />
                 </div>
             `;
         },
@@ -47,7 +47,7 @@ const ProductDetailsImages = ({ productTitle, imageCover, images }) => {
                     {imageCover && (
                         <SwiperSlide key="imageCover">
                             <div>
-                                <Image width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={imageCover} alt={productTitle} />
+                                <Image loading='lazy' width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={imageCover} alt={productTitle} />
                             </div>
                         </SwiperSlide>
                     )}
@@ -55,7 +55,7 @@ const ProductDetailsImages = ({ productTitle, imageCover, images }) => {
                     {images && images.map((image, index) => (
                         <SwiperSlide key={index}>
                             <div>
-                                <Image width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={image} alt={productTitle} />
+                                <Image loading='lazy' width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={image} alt={productTitle} />
                             </div>
                         </SwiperSlide>
                     ))}
@@ -75,7 +75,7 @@ const ProductDetailsImages = ({ productTitle, imageCover, images }) => {
                             </div>
                         </div>
                         <div>
-                            <Image width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={activeImage} alt={productTitle} />
+                            <Image loading='lazy' width={500} height={500} className='w-full h-full aspect-square bg-cover bg-center rounded-2xl' src={activeImage} alt={productTitle} />
                         </div>
                     </div>
                 </div>

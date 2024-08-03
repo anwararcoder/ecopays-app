@@ -117,7 +117,7 @@ const CategoriesSec = () => {
                         return (
                             <SwiperSlide key={item._id}>
                                 <Link href={`/products?category[in][]=${item._id}`} className='group block border-[1px] border-[#DDD]/50 hover:border-[##98C1D9] hover:text-[##98C1D9] bg-white p-[30px] text-center shadow-md'>
-                                    <Image width={500} height={500} className='w-[64px] h-[64px] object-cover mx-auto mb-[15px]' src={item.image} alt={item.name} />
+                                    <Image loading='lazy' width={500} height={500} className='w-[64px] h-[64px] object-cover mx-auto mb-[15px]' src={item.image} alt={item.name} />
                                     <h4 className='text-[16px] leading-[1] font-[500] group-hover:text-[##98C1D9]'>{item.name}</h4>
                                 </Link>
                             </SwiperSlide>
