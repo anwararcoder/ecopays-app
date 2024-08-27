@@ -92,7 +92,7 @@ const CartItemsDetails = ({ cart, refetchCart }) => {
             <span className="text-[18px] leading-[1.3] capitalize font-[600]">
               {cart?.data?.totalAfterDiscount
                 ? cart?.data?.totalAfterDiscount
-                : cart?.data?.totalCartPrice}{" "}
+                : cart?.data?.totalCartPrice}
               EG
             </span>
           </div>

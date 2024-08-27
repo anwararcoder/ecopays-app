@@ -131,7 +131,7 @@ const Orders = () => {
     };
     return (
       <div className="w-full flex items-center justify-between">
-        <h4 class="text-[20px] text-[#9B9B9B] leading-[1.3] capitalize font-[600]">
+        <h4 className="text-[20px] text-[#9B9B9B] leading-[1.3] capitalize font-[600]">
           Orders
         </h4>
         <div className="relative h-[50px]">
@@ -147,7 +147,7 @@ const Orders = () => {
             className="group inline-block absolute top-[50%] translate-y-[-50%] right-[20px]"
           >
             <svg
-              class="fill-[#3D5A80] group-hover:fill-[#98C1D9]"
+              className="fill-[#3D5A80] group-hover:fill-[#98C1D9]"
               width="20"
               height="20"
               viewBox="0 0 20 20"

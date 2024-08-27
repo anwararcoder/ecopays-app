@@ -4,7 +4,7 @@ import React from 'react'
 const Admin = () => {
     return (
         <>
-            Admin
+            Admin 354
         </>
     )
 }

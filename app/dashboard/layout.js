@@ -1,23 +1,28 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { ContextAuth } from "../../Context/contextAuth";
-import { useRouter } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
-import { getUserDetails } from "@/ReactQuery/FunctionsReactQuery";
+import Login from "@/Components/Login/Login";
+import Navbar from "@/Components/Navbar/Navbar";
+import Footer from "@/Components/Footer/Footer";
 
 const DashboardLayout = ({ admin, user }) => {
-  const router = useRouter();
   let { dataUser, isLogged } = useContext(ContextAuth);
-  const [role, setRole] = useState();
-
-  useEffect(() => {
-    if (dataUser) {
-      setRole(dataUser.data.role);
-    }
-  }, [dataUser]);
-
   return (
-    <>{isLogged ? (role === "admin" ? admin : user) : router.push("/login")}</>
+    <>
+      {isLogged ? (
+        dataUser?.data?.role === "admin" ? (
+          admin
+        ) : (
+          <>
+            <Navbar />
+            {user}
+            <Footer />
+          </>
+        )
+      ) : (
+        <Login />
+      )}
+    </>
   );
 };
 

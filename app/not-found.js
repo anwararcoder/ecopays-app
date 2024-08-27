@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Custom404() {
   return (
     <section className=" fixed inset-0 z-[1000]">
-      <div class="bg-white text-black">
-        <div class="flex h-screen">
-          <div class="m-auto text-center">
+      <div className="bg-white text-black">
+        <div className="flex h-screen">
+          <div className="m-auto text-center">
             <div>
               <svg
                 width="631"
@@ -266,10 +266,10 @@ export default function Custom404() {
                 </defs>
               </svg>
             </div>
-            <p class="mt-[30px] text-[17px] font-[500] mb-[22px] capitalize">
+            <p className="mt-[30px] text-[17px] font-[500] mb-[22px] capitalize">
               The stuff you were looking for does not exist
             </p>
-            <Link class="btn-1 btn-3" href="/"><span>Go To HomePage</span></Link>
+            <Link className="btn-1 btn-3" href="/"><span>Go To HomePage</span></Link>
           </div>
         </div>
       </div>

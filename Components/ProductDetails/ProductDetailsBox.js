@@ -17,7 +17,7 @@ const ProductDetailsBox = ({
   return (
     <>
       <p className="text-[15px] mb-1">
-        {category?.data.name}{" "}
+        {category?.data.name}
         {subCategory?.data.name ? ` : ${subCategory?.data.name}` : ""}
       </p>
       <h2 className="text-2xl sm:text-3xl font-semibold mb-2.5">

@@ -28,77 +28,77 @@ const OrderInvoice = () => {
       </div>
       <div className="overflow-x-auto" ref={componentRef}>
         <div className="min-w-[800px]">
-          <div class="flex flex-wrap items-center rounded-t-3xl justify-between gap-6 bg-[#EE6C4D] p-8 relative after:rotate-[133deg] after:rounded-ss-none after:-bottom-3 after:start-[50%] after:absolute after:border-[25px] after:border-t-[#EE6C4D] after:border-e-[#EE6C4D] after:border-transparent">
+          <div className="flex flex-wrap items-center rounded-t-3xl justify-between gap-6 bg-[#EE6C4D] p-8 relative after:rotate-[133deg] after:rounded-ss-none after:-bottom-3 after:start-[50%] after:absolute after:border-[25px] after:border-t-[#EE6C4D] after:border-e-[#EE6C4D] after:border-transparent">
             <Image loading='lazy' className="max-w-[150px]" src={logoImage} alt="Ecopays" />
-            <h4 class="text-5xl font-semibold uppercase tracking-widest text-white float-right">
+            <h4 className="text-5xl font-semibold uppercase tracking-widest text-white float-right">
               Invoice
             </h4>
           </div>
-          <div class="bg-white md:p-16 p-10">
-            <div class="flex flex-wrap items-center justify-between gap-6">
-              <div class="flex gap-3">
-                <h1 class="text-xl font-semibold tracking-widest">
+          <div className="bg-white md:p-16 p-10">
+            <div className="flex flex-wrap items-center justify-between gap-6">
+              <div className="flex gap-3">
+                <h1 className="text-xl font-semibold tracking-widest">
                   Invoice to:
                 </h1>
                 <div>
-                  <h4 class="text-lg font-semibold">{order?.data.user.name}</h4>
-                  <p class="w-52 text-sm font-medium text-gray-500 mt-2">
-                    {order?.data.shippingAddress.details},{" "}
-                    {order?.data.shippingAddress.city},{" "}
+                  <h4 className="text-lg font-semibold">{order?.data.user.name}</h4>
+                  <p className="w-52 text-sm font-medium text-gray-500 mt-2">
+                    {order?.data.shippingAddress.details},
+                    {order?.data.shippingAddress.city},
                     {order?.data.shippingAddress.postalCode}
                   </p>
                 </div>
               </div>
 
               <div>
-                <p class="text-xl font-semibold">
-                  Invoice #:{" "}
-                  <span class="ps-5 text-gray-500">{order?.data.id}</span>
+                <p className="text-xl font-semibold">
+                  Invoice #:
+                  <span className="ps-5 text-gray-500">{order?.data.id}</span>
                 </p>
-                <p class="text-xl font-semibold">
-                  Date: <span class="ps-5 text-gray-500">{formattedDate}</span>
+                <p className="text-xl font-semibold">
+                  Date: <span className="ps-5 text-gray-500">{formattedDate}</span>
                 </p>
               </div>
             </div>
 
-            <div class="overflow-x-auto">
-              <table class="border-gray-400 table-auto w-full text-sm mt-14 mb-12 whitespace-pre">
+            <div className="overflow-x-auto">
+              <table className="border-gray-400 table-auto w-full text-sm mt-14 mb-12 whitespace-pre">
                 <thead>
                   <tr>
-                    <th class="p-4 uppercase tracking-widest text-lg font-medium text-start">
+                    <th className="p-4 uppercase tracking-widest text-lg font-medium text-start">
                       SL.
                     </th>
-                    <th class="p-4 uppercase tracking-widest text-lg font-medium text-start">
+                    <th className="p-4 uppercase tracking-widest text-lg font-medium text-start">
                       Item Description
                     </th>
-                    <th class="p-4 uppercase tracking-widest text-lg font-medium text-start">
+                    <th className="p-4 uppercase tracking-widest text-lg font-medium text-start">
                       Price
                     </th>
-                    <th class="p-4 pe-7 uppercase tracking-widest text-lg font-medium text-center">
+                    <th className="p-4 pe-7 uppercase tracking-widest text-lg font-medium text-center">
                       Qty
                     </th>
-                    <th class="p-4 uppercase tracking-widest text-lg font-medium text-end">
+                    <th className="p-4 uppercase tracking-widest text-lg font-medium text-end">
                       Total
                     </th>
                   </tr>
                 </thead>
-                <tbody class="bg-white">
+                <tbody className="bg-white">
                   {order?.data.cartItems.map((item, index) => {
                     return (
-                      <tr key={item._id} class="bg-gray-200">
-                        <td class="p-5 border-b border-gray-400 text-base font-medium">
+                      <tr key={item._id} className="bg-gray-200">
+                        <td className="p-5 border-b border-gray-400 text-base font-medium">
                           {index + 1}
                         </td>
-                        <td class="p-5 border-b border-gray-400 text-base font-medium">
+                        <td className="p-5 border-b border-gray-400 text-base font-medium">
                           {item.product.title}
                         </td>
-                        <td class="p-5 border-b border-gray-400 text-base font-medium">
+                        <td className="p-5 border-b border-gray-400 text-base font-medium">
                           {item.price} EG
                         </td>
-                        <td class="p-5 border-b border-gray-400 text-base font-medium text-center">
+                        <td className="p-5 border-b border-gray-400 text-base font-medium text-center">
                           {item.count}
                         </td>
-                        <td class="p-5 border-b border-gray-400 text-base font-medium text-end">
+                        <td className="p-5 border-b border-gray-400 text-base font-medium text-end">
                           {item.count * item.price} EG
                         </td>
                       </tr>
@@ -108,17 +108,17 @@ const OrderInvoice = () => {
               </table>
             </div>
 
-            <div class="flex flex-wrap justify-between gap-6 mb-5">
+            <div className="flex flex-wrap justify-between gap-6 mb-5">
               <div>
-                <h1 class="text-xl font-semibold">
+                <h1 className="text-xl font-semibold">
                   Thank you for your business
                 </h1>
 
-                <p class="text-base font-medium text-[#98C1D9] mt-5">
+                <p className="text-base font-medium text-[#98C1D9] mt-5">
                   Payment info:
                 </p>
-                <p class="text-sm font-normal">
-                  Name:{" "}
+                <p className="text-sm font-normal">
+                  Name:
                   {order?.data.paymentMethodType === "cash"
                     ? "Cash On Delivery"
                     : "Payment via credit card"}
@@ -126,26 +126,26 @@ const OrderInvoice = () => {
               </div>
 
               <div>
-                <div class="flex flex-wrap items-center justify-end">
+                <div className="flex flex-wrap items-center justify-end">
                   <div>
-                    <h2 class="pb-1 text-base font-normal">Sub total:</h2>
-                    <h2 class="pb-4 text-base font-normal">Tax:</h2>
-                    <h2 class="pb-4 text-base font-normal">Shipping:</h2>
-                    <h2 class="py-3 text-base font-medium border-t border-gray-500 text-[#98C1D9]">
+                    <h2 className="pb-1 text-base font-normal">Sub total:</h2>
+                    <h2 className="pb-4 text-base font-normal">Tax:</h2>
+                    <h2 className="pb-4 text-base font-normal">Shipping:</h2>
+                    <h2 className="py-3 text-base font-medium border-t border-gray-500 text-[#98C1D9]">
                       Total:
                     </h2>
                   </div>
                   <div>
-                    <h4 class="ps-7 pb-1 text-base font-medium text-end">
+                    <h4 className="ps-7 pb-1 text-base font-medium text-end">
                       {order?.data.totalOrderPrice} EG
                     </h4>
-                    <h4 class="ps-7 pb-4 text-base font-medium text-end">
+                    <h4 className="ps-7 pb-4 text-base font-medium text-end">
                       {order?.data.taxPrice} EG
                     </h4>
-                    <h4 class="ps-7 pb-4 text-base font-medium text-end">
+                    <h4 className="ps-7 pb-4 text-base font-medium text-end">
                       {order?.data.shippingPrice} EG
                     </h4>
-                    <h4 class="py-3 text-base font-medium text-end border-t border-gray-500 text-[#98C1D9]">
+                    <h4 className="py-3 text-base font-medium text-end border-t border-gray-500 text-[#98C1D9]">
                       {order?.data.totalOrderPrice} EG
                     </h4>
                   </div>
@@ -153,11 +153,11 @@ const OrderInvoice = () => {
               </div>
             </div>
 
-            <hr class="w-40 border border-gray-500 mt-1" />
-            <h3 class="text-xl font-semibold border-gray-500">AR-Coder</h3>
+            <hr className="w-40 border border-gray-500 mt-1" />
+            <h3 className="text-xl font-semibold border-gray-500">AR-Coder</h3>
           </div>
 
-          <div class="bg-[#EE6C4D] p-6 relative rounded-3xl after:-rotate-45 rounded-tr-none rounded-ss-none after:-top-3 after:start-[50%] after:absolute after:border-[25px] after:border-t-[#EE6C4D] after:border-e-[#EE6C4D] after:border-transparent"></div>
+          <div className="bg-[#EE6C4D] p-6 relative rounded-3xl after:-rotate-45 rounded-tr-none rounded-ss-none after:-top-3 after:start-[50%] after:absolute after:border-[25px] after:border-t-[#EE6C4D] after:border-e-[#EE6C4D] after:border-transparent"></div>
         </div>
       </div>
     </div>

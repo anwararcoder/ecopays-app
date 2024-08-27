@@ -36,6 +36,9 @@ const NavbarMain = () => {
         })) || []
     }));
 
+    console.log("options", options);
+    
+
 
     useEffect(() => {
         const handleScroll = () => {

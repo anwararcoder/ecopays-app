@@ -5,6 +5,8 @@ import { ContextAuth } from "@/Context/contextAuth";
 import { useRouter } from "next/navigation";
 import { getCart } from "@/ReactQuery/FunctionsReactQuery";
 import { useQuery } from "@tanstack/react-query";
+import Navbar from "@/Components/Navbar/Navbar";
+import Footer from "@/Components/Footer/Footer";
 
 const CheckoutPage = () => {
   const { isLogged } = useContext(ContextAuth);
@@ -26,6 +28,7 @@ const CheckoutPage = () => {
   }
   return (
     <>
+    <Navbar />
       {isLogged ? (
         <>
           {cart?.status === "success" ? (
@@ -57,6 +60,7 @@ const CheckoutPage = () => {
           </div>
         </section>
       )}
+      <Footer />
     </>
   );
 };

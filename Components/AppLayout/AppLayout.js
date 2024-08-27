@@ -5,9 +5,7 @@ import Footer from "../Footer/Footer";
 const AppLayout = ({ children }) => {
   return (
     <Fragment>
-      <Navbar />
       {children}
-      <Footer />
     </Fragment>
   );
 };
